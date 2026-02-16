@@ -24,6 +24,62 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        id: 'deep-research',
+        slug: 'deep-research',
+        title: 'DeepResearch',
+        subtitle: 'AI-Powered Research Assistant',
+        role: 'Lead AI Engineer',
+        stack: ['Next.js', 'Llama 3.3 70B', 'LangChain', 'Supabase'],
+        category: 'AI & Agents',
+        summary: 'An advanced research assistant that aggregates 50+ sources and transforms information overload into actionable insights using domain-specific AI analysis.',
+        content: {
+            problem: 'Information overload makes it difficult to consume complex technical papers and breaking news efficiently.',
+            solution: 'A platform that aggregates, analyzes, and explains content from multiple sources using expert personas.',
+            keyFeatures: [
+                'Smart Briefing & Auto-Explain',
+                'Multi-Source Intelligence (TechCrunch, ArXiv, etc.)',
+                'Deep Explain with 9 Expert Personas',
+                'Chat with Article',
+                'Glassmorphism UI'
+            ],
+            technicalDetails: [
+                'Parallel processing for sub-second response times',
+                'Custom Markdown parsers for complex rendering',
+                'Caching strategy with URL hashing',
+                'Vercel Cron Jobs for background analysis'
+            ],
+            impact: 'Transforms how users consume information by providing expert-level breakdowns and instant insights.'
+        },
+        link: '#',
+        linkText: 'Learn More' // Placeholder link
+    },
+    {
+        id: 'urdu-finance-ai',
+        slug: 'urdu-finance-ai',
+        title: 'Urdu Finance AI',
+        subtitle: 'Fine-Tuned Qwen2.5 & Quantized',
+        role: 'AI Researcher',
+        stack: ['PyTorch', 'LoRA', 'Qwen2.5', 'llama.cpp'],
+        category: 'AI & Agents',
+        summary: 'Fine-tuned Qwen2.5-0.5B on financial text and quantized it for high-performance edge deployment.',
+        content: {
+            coreIdea: 'Democratizing financial AI by enabling high-accuracy Urdu translation on edge devices.',
+            technicalDetails: [
+                'Fine-tuned Qwen2.5-0.5B on 3k+ financial sentences',
+                'Used LoRA for parameter-efficient training',
+                'Quantized to 4-bit (q4_0) using llama.cpp',
+                'Reduced model size by 67% (330MB)'
+            ],
+            results: [
+                'Achieved 9.22 tokens/sec on standard hardware',
+                '0.6110 final training loss',
+                'Accurate translation of professional financial terms'
+            ]
+        },
+        link: '#',
+        linkText: 'Check Benchmark'
+    },
+    {
         id: 'amna-aman',
         slug: 'amna-aman',
         title: 'AmnaAman',
@@ -153,25 +209,6 @@ export const projects: Project[] = [
         },
         link: 'https://edu-ai-lac.vercel.app/',
         linkText: 'Try EduAI'
-    },
-    {
-        id: 'reddit-auto-poster',
-        slug: 'reddit-auto-poster',
-        title: 'Reddit Auto Poster',
-        subtitle: 'AI-Driven Reddit Posting System',
-        role: 'Automation Engineer',
-        stack: ['Python', 'Reddit API', 'LLMs'],
-        category: 'Automation',
-        summary: 'Automated system that generates context-aware posts for relevant subreddits.',
-        content: {
-            problem: 'Manual subreddit posting is time-consuming and inconsistent.',
-            solution: 'An automated system that generates context-aware posts and provides direct links for publishing.',
-            keyFeatures: [
-                'Community-aware content generation',
-                'Automation logic',
-                'Scalable posting workflow'
-            ]
-        }
     },
     {
         id: 'cortex-ai',
