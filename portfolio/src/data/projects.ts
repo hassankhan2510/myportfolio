@@ -24,6 +24,25 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        id: 'quant-microstructure',
+        slug: 'quant-microstructure',
+        title: 'Quantitative Market Microstructure',
+        subtitle: 'High-Frequency Econometrics in Crypto & Gold',
+        role: 'Quantitative Researcher',
+        stack: ['Python', 'Statsmodels', 'MetaTrader 5', 'Binance API'],
+        category: 'Deep-Tech Research',
+        summary: 'A pair of empirical working papers proving that tokenized real-world assets (PAXG) act as high-fidelity microstructure proxies for opaque OTC markets, and that intraday realized volatility is robustly forecastable where directional momentum fails.',
+        content: {
+            problem: 'Spot gold lacks a public limit order book, making microstructure research impossible without expensive institutional data. Furthermore, retail signal models often conflate forecastable volatility with un-forecastable direction.',
+            solution: 'Utilized Binance REST API and MetaTrader 5 to aggregate 5 years of high-frequency data, running out-of-sample Heterogeneous Autoregressive (HAR) models and Engle-Granger cointegration tests.',
+            technicalDetails: [
+                'Proved spot gold Granger-causes tokenized gold (PAXG) at high frequencies with a fast mean-reverting basis.',
+                'Engineered an OOS HAR model that decisively beat RiskMetrics EWMA benchmarks for realized volatility prediction.',
+                'Employed expanding-window walk-forward validation to ensure honest, out-of-sample statistical rigor.'
+            ]
+        }
+    },
+    {
         id: 'morphogenetic-engine',
         slug: 'morphogenetic-engine',
         title: 'Morphogenetic Engine',
