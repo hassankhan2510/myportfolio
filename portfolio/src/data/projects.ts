@@ -19,18 +19,134 @@ export interface Project {
     };
     link?: string;
     linkText?: string;
-    category: 'Full Stack' | 'AI & Agents' | 'Research' | 'Hardware' | 'Automation';
+    category: 'Deep-Tech Research' | 'Enterprise AI Systems' | 'Assistive Tech & Hardware' | 'Full Stack Apps';
 }
 
 export const projects: Project[] = [
     {
+        id: 'albisight',
+        slug: 'albisight',
+        title: 'AlbiSight',
+        subtitle: 'Assistive Computational Optics Engine',
+        role: 'Researcher & Lead Engineer',
+        stack: ['PyTorch', 'Differentiable Optics', 'Python'],
+        category: 'Deep-Tech Research',
+        summary: 'A validated differentiable optics engine that designs personalized corrective lenses tailored to a single person\'s eyes, bypassing mass-produced limitations.',
+        content: {
+            problem: 'Mass-produced eyewear fails to serve individuals with complex or highly specific visual impairments (like ocular albinism).',
+            solution: 'An inverse-design computational engine that optimizes lens topologies specific to the patient.',
+            technicalDetails: [
+                'Engine passes 8/8 physics ground-truth tests in PyTorch.',
+                'Analyzed 1,765 real pediatric eyes.',
+                'Currently in simulation stage, preparing for physical lens fabrication.',
+                'Two research papers drafted on the methodology.'
+            ],
+            impact: 'Born from my own lived experience with low vision, this technology aims to bring precision vision to those left behind by standard optometry.'
+        },
+        link: 'https://albisightlabs.vercel.app/',
+        linkText: 'View Venture Site'
+    },
+    {
+        id: 'phononic-armor',
+        slug: 'phononic-armor',
+        title: 'PhononicArmor',
+        subtitle: 'Reusable Impact-Protection Metamaterials',
+        role: 'Materials Computation Researcher',
+        stack: ['NumPy', 'SciPy', 'Inverse Design', 'Machine Learning'],
+        category: 'Deep-Tech Research',
+        summary: 'Computationally designed reusable protective padding (negative-stiffness lattices) that absorbs impact 14–36% better than commercial honeycomb at equal mass.',
+        content: {
+            coreIdea: 'Using machine learning surrogate models and inverse design algorithms to discover novel metamaterial geometries for impact absorption.',
+            technicalDetails: [
+                'Developed a computational pipeline in NumPy/SciPy.',
+                'Achieved 14–36% better energy absorption compared to standard honeycomb structures.',
+                'Lattices recover elastically for repeated use (unlike single-use foams).'
+            ],
+            impact: 'Applications span sports helmets, worker safety gear, and automotive bumpers. Manuscript ready for publication.'
+        },
+        link: 'https://phononicarmor.vercel.app/',
+        linkText: 'View Venture Site'
+    },
+    {
+        id: 'syndar',
+        slug: 'syndar',
+        title: 'Syndar',
+        subtitle: 'Spaceborne SAR Remote-Sensing Concept',
+        role: 'Concept Architect',
+        stack: ['InSAR', 'Remote Sensing', 'AI Analysis'],
+        category: 'Deep-Tech Research',
+        summary: 'A satellite-intelligence product concept utilizing Synthetic Aperture Radar (SAR) for property verification and mining monitoring.',
+        content: {
+            problem: 'Traditional optical satellite imagery fails in poor weather or at night, and lacks granular deformation data.',
+            solution: 'An InSAR/SAR based intelligence platform that can monitor ground deformation and verify structures regardless of cloud cover.'
+        },
+        link: 'https://syndar.vercel.app/',
+        linkText: 'View Concept Site'
+    },
+    {
+        id: 'mineguard',
+        slug: 'mineguard',
+        title: 'MineGuard',
+        subtitle: 'Federated Edge AI for Mine Worker Safety',
+        role: 'Systems Engineer',
+        stack: ['Edge AI', 'Federated Learning', 'C++', 'Microcontrollers'],
+        category: 'Deep-Tech Research',
+        summary: 'A system that pushes predictive AI into underground mine shafts on low-cost microcontrollers, predicting seismic hazards locally in milliseconds.',
+        content: {
+            keyFeatures: [
+                'Survives network failures that would blind traditional centralized monitoring.',
+                'Sub-KB federated model updates for highly constrained network links.',
+                'Real-time seismic hazard prediction on the edge.'
+            ]
+        }
+    },
+    {
+        id: 'nexaura-hms',
+        slug: 'nexaura-hms',
+        title: 'Nexaura HMS',
+        subtitle: 'AI-Native Hospital Management System',
+        role: 'Projects Lead',
+        stack: ['Next.js', 'PostgreSQL', 'NLP', 'Enterprise AI'],
+        category: 'Enterprise AI Systems',
+        summary: 'An AI-native hospital management platform for Pakistani healthcare featuring bilingual (English/Urdu) AI clinical scribing.',
+        content: {
+            keyFeatures: [
+                'Live AI clinical scribing for outpatient clinics.',
+                'Bilingual English and Urdu support for local healthcare context.',
+                'Secure patient data management and robust enterprise architecture.'
+            ],
+            impact: 'Streamlined clinical workflows for government and corporate healthcare clients in Pakistan.'
+        },
+        link: 'https://www.nexauragroup.co.uk',
+        linkText: 'Nexaura Group'
+    },
+    {
+        id: 'nexaura-qa',
+        slug: 'nexaura-qa',
+        title: 'SCO Call QA Platform',
+        subtitle: 'Enterprise AI Call Quality Assurance',
+        role: 'Projects Lead',
+        stack: ['Python', 'Speech-to-Text', 'LLMs', 'FastAPI'],
+        category: 'Enterprise AI Systems',
+        summary: 'Automated quality assurance platform for Pakistan\'s Special Communications Organization (SCO) contact-center operations.',
+        content: {
+            keyFeatures: [
+                'Processes ~15,000 calls per month.',
+                'Replaced manual auditing with 100% AI-driven call coverage.',
+                'Extracts sentiment, compliance, and resolution metrics automatically.'
+            ]
+        },
+        link: 'https://www.nexauragroup.co.uk',
+        linkText: 'Nexaura Group'
+    },
+    {
         id: 'deep-research',
         slug: 'deep-research',
         title: 'DeepResearch',
-        subtitle: 'AI-Powered Research Assistant',
+        subtitle: 'AI-Powered Knowledge Engine',
         role: 'Lead AI Engineer',
         stack: ['Next.js', 'Llama 3.3 70B', 'LangChain', 'Supabase'],
-        category: 'AI & Agents',
+        category: 'Enterprise AI Systems',
         summary: 'An advanced research assistant that aggregates 50+ sources and transforms information overload into actionable insights using domain-specific AI analysis.',
         content: {
             problem: 'Information overload makes it difficult to consume complex technical papers and breaking news efficiently.',
@@ -39,19 +155,14 @@ export const projects: Project[] = [
                 'Smart Briefing & Auto-Explain',
                 'Multi-Source Intelligence (TechCrunch, ArXiv, etc.)',
                 'Deep Explain with 9 Expert Personas',
-                'Chat with Article',
-                'Glassmorphism UI'
+                'Chat with Article'
             ],
             technicalDetails: [
                 'Parallel processing for sub-second response times',
                 'Custom Markdown parsers for complex rendering',
-                'Caching strategy with URL hashing',
                 'Vercel Cron Jobs for background analysis'
-            ],
-            impact: 'Transforms how users consume information by providing expert-level breakdowns and instant insights.'
-        },
-        link: '#',
-        linkText: 'Learn More' // Placeholder link
+            ]
+        }
     },
     {
         id: 'urdu-finance-ai',
@@ -60,7 +171,7 @@ export const projects: Project[] = [
         subtitle: 'Fine-Tuned Qwen2.5 & Quantized',
         role: 'AI Researcher',
         stack: ['PyTorch', 'LoRA', 'Qwen2.5', 'llama.cpp'],
-        category: 'AI & Agents',
+        category: 'Deep-Tech Research',
         summary: 'Fine-tuned Qwen2.5-0.5B on financial text and quantized it for high-performance edge deployment.',
         content: {
             coreIdea: 'Democratizing financial AI by enabling high-accuracy Urdu translation on edge devices.',
@@ -72,53 +183,25 @@ export const projects: Project[] = [
             ],
             results: [
                 'Achieved 9.22 tokens/sec on standard hardware',
-                '0.6110 final training loss',
-                'Accurate translation of professional financial terms'
+                '0.6110 final training loss'
             ]
-        },
-        link: '#',
-        linkText: 'Check Benchmark'
+        }
     },
     {
-        id: 'amna-aman',
-        slug: 'amna-aman',
-        title: 'AmnaAman',
-        subtitle: 'Inclusive Tech Organization Platform',
-        role: 'Expert Full-Stack Developer & UI/UX Designer',
-        stack: ['React (Vite)', 'Tailwind CSS', 'Framer Motion', 'Supabase'],
-        category: 'Full Stack',
-        summary: 'A fully responsive, accessibility-first organization website with authentication-gated learning content.',
+        id: 'narrative-engine',
+        slug: 'narrative-engine',
+        title: 'NarrativeEngine',
+        subtitle: 'AI Content Production System',
+        role: 'AI Systems Architect',
+        stack: ['Python', 'GitHub Actions CI/CD', 'TTS', 'Generative AI'],
+        category: 'Enterprise AI Systems',
+        summary: 'An end-to-end pipeline that turns a topic into a finished, professional video across platforms in multiple languages.',
         content: {
             keyFeatures: [
-                'Designed and implemented Light/Dark mode with accessibility-friendly contrast',
-                'Built Supabase-based authentication for protected student course access',
-                'Developed modular pages: Projects, Volunteer Registration, Donations, Contact',
-                'Implemented protected routes for an online student portal',
-                'Optimized for free-tier deployment on Vercel/Netlify'
-            ],
-            impact: 'Enabled a youth-led organization to deliver inclusive education and community programs through a modern, scalable web platform.'
-        },
-        link: 'https://amna-aman-project.vercel.app/',
-        linkText: 'Visit Site'
-    },
-    {
-        id: 'global-truck-tire',
-        slug: 'global-truck-tire',
-        title: 'Global Truck Tire',
-        subtitle: 'Production Business Website & Ordering System',
-        role: 'Senior Full-Stack Architect',
-        stack: ['React (Vite)', 'Tailwind CSS', 'PHP (API)', 'MySQL'],
-        category: 'Full Stack',
-        summary: 'Architected and built a production-ready tire shop platform under strict hosting constraints.',
-        content: {
-            keyFeatures: [
-                'Designed MySQL schema supporting products, discounts, admin auth, and orders',
-                'Built a PHP REST API with CORS support for React integration',
-                'Implemented admin dashboard for product and order management',
-                'Created a simulated checkout flow persisting orders directly to the database',
-                'Delivered a Dark-Mode capable, professional UI optimized for real customers'
-            ],
-            impact: 'Delivered a real-world commercial system that works within shared hosting limits while maintaining modern UX and clean architecture.'
+                'AI script generation to neural voice to auto-sourced visuals to cinematic render.',
+                'Multilingual support (EN/UR/HI).',
+                '$0 production cost, fully automated via GitHub Actions CI/CD pipelines.'
+            ]
         }
     },
     {
@@ -128,22 +211,18 @@ export const projects: Project[] = [
         subtitle: 'For Web Workers',
         role: 'Researcher & Systems Engineer',
         stack: ['JavaScript', 'SharedArrayBuffer', 'Atomics', 'Web Workers'],
-        category: 'Research',
+        category: 'Deep-Tech Research',
         summary: 'Proposed and implemented a human-in-the-loop thread scheduling system for modern web browsers.',
         content: {
             coreIdea: 'Default browser schedulers act as black boxes. This research introduces Interactive Scheduling, where users visually monitor worker load and directly control task affinity.',
             technicalDetails: [
                 'Designed a SharedArrayBuffer-based shared memory architecture for high-frequency coordination',
-                'Used Atomics.wait / notify to eliminate busy-waiting and reduce CPU waste',
-                'Built a real-time radial heatmap UI for visualizing worker throughput',
-                'Enabled live task migration between workers without restarting computation'
+                'Used Atomics.wait / notify to eliminate busy-waiting and reduce CPU waste'
             ],
             results: [
                 'Achieved up to 127% throughput improvement when migrating stalled tasks',
-                'Observed transient performance spikes up to 2.7M ops/sec',
-                'Demonstrated that human-in-the-loop scheduling can outperform automatic schedulers'
-            ],
-            futureDirection: 'Proposed training an ML model to learn from user migrations and gradually automate affinity decisions.'
+                'Observed transient performance spikes up to 2.7M ops/sec'
+            ]
         },
         link: 'https://www.npmjs.com/package/dynamic-affinity-scheduler-research',
         linkText: 'View Package'
@@ -151,132 +230,51 @@ export const projects: Project[] = [
     {
         id: 'safe-band',
         slug: 'safe-band',
-        title: 'Smart Emotional & Safety Monitoring Band',
+        title: 'Smart Safety Band',
         subtitle: 'For Autistic Children',
-        role: 'Inventor · AI Systems Designer',
+        role: 'Inventor',
         stack: ['Python', 'ML', 'IoT', 'Biosensors'],
-        category: 'Hardware',
+        category: 'Assistive Tech & Hardware',
         summary: 'A next-generation wearable system that predicts emotional meltdowns and ensures safety through AI-driven behavioral analysis.',
         content: {
             keyFeatures: [
-                'Micro-Behavior Prediction Engine analyzing tapping, pressure, and tremor patterns',
+                'Micro-Behavior Prediction Engine analyzing tapping and tremor patterns',
                 'Environmental trigger correlation (noise, light, crowd density)',
-                'Automatic calming protocol using vibrations, LED transitions, and ultrasonic tones',
-                'Triple-layer pressure-sensitive band to detect anxiety rubbing',
-                'Non-verbal vibration language for guidance',
-                'GPS + motion fusion to detect wandering checks',
                 'Offline decentralized emergency broadcast'
             ]
         }
     },
     {
+        id: 'amna-aman',
+        slug: 'amna-aman',
+        title: 'AmnaAman',
+        subtitle: 'Inclusive Tech Platform',
+        role: 'Co-founder & CTO',
+        stack: ['React (Vite)', 'Tailwind CSS', 'Supabase'],
+        category: 'Full Stack Apps',
+        summary: 'A fully responsive, accessibility-first organization website with authentication-gated learning content.',
+        content: {
+            keyFeatures: [
+                'Accessibility-friendly contrast and Light/Dark modes',
+                'Supabase-based authentication for protected student courses'
+            ]
+        },
+        link: 'https://amna-aman-project.vercel.app/',
+        linkText: 'Visit Site'
+    },
+    {
         id: 'mind-bridge',
         slug: 'mind-bridge',
         title: 'MindBridge',
-        subtitle: 'AI-Powered Mental Health Support System',
-        role: 'AI Engineer · Full-Stack Developer',
-        stack: ['React', 'Python (FastAPI)', 'NLP', 'TensorFlow'],
-        category: 'AI & Agents',
+        subtitle: 'AI Mental Health Support',
+        role: 'AI Engineer',
+        stack: ['React', 'Python', 'NLP'],
+        category: 'Enterprise AI Systems',
         summary: 'AI-driven mental health platform analyzing emotional patterns from text and voice to deliver personalized support.',
         content: {
             keyFeatures: [
-                'AI-based emotion detection from text input',
                 'Voice stress analysis for hidden emotional signals',
-                'Mental health risk scoring engine',
-                'Caregiver alerts only in high-risk scenarios',
-                'Privacy-preserving architecture'
-            ],
-            ethicalPositioning: 'Does not diagnose conditions or replace professionals; focuses on early detection, support, and awareness.'
-        }
-    },
-    {
-        id: 'edu-ai',
-        slug: 'edu-ai',
-        title: 'EduAI',
-        subtitle: 'AI-Powered Educational Assistant',
-        role: 'Product Engineer',
-        stack: ['AI', 'Next.js'],
-        category: 'AI & Agents',
-        summary: 'Dynamically adapts explanations based on grade level, presenting the same concept with appropriate depth.',
-        content: {
-            problem: 'Students fail not because of lack of effort, but because explanations aren’t tailored to their level.',
-            solution: 'EduAI dynamically adapts explanations based on grade level (5–10).',
-            keyFeatures: [
-                'Grade-aware explanations',
-                'AI-driven content adaptation',
-                'Clean, student-focused interface'
-            ]
-        },
-        link: 'https://edu-ai-lac.vercel.app/',
-        linkText: 'Try EduAI'
-    },
-    {
-        id: 'cortex-ai',
-        slug: 'cortex-ai',
-        title: 'Cortex AI',
-        subtitle: 'AI Agent System (Internal)',
-        role: 'AI Engineer',
-        stack: ['LangChain', 'Python', 'Agents'],
-        category: 'AI & Agents',
-        summary: 'AI agent orchestration system built to explore autonomous behavior in real operational scenarios.',
-        content: {
-            keyFeatures: [
-                'AI agent orchestration',
-                'Tool usage',
-                'Decision logic',
-                'Real operational scenario testing'
-            ]
-        }
-    },
-    {
-        id: 'accessibility-hub',
-        slug: 'accessibility-hub',
-        title: 'Accessibility Hub',
-        subtitle: 'Chrome Extension',
-        role: 'Extension Developer',
-        stack: ['JavaScript', 'Chrome API', 'AI'],
-        category: 'Full Stack',
-        summary: 'AI-powered browser extension designed to assist users with accessibility needs in real time.',
-        content: {
-            problem: 'Accessibility tools are often fragmented and manual.',
-            solution: 'An embedded AI assistant for real-time web accessibility improvements.'
-        }
-    },
-    {
-        id: 'lead-gen-agent',
-        slug: 'lead-gen-agent',
-        title: 'Lead Generation Agent',
-        subtitle: 'LinkedIn + Google Maps Automation',
-        role: 'Automation Engineer',
-        stack: ['Puppeteer', 'AI', 'Node.js'],
-        category: 'Automation',
-        summary: 'AI-driven agent that extracts, cleans, and structures leads from LinkedIn and Google Maps.',
-        content: {
-            problem: 'Lead generation is repetitive and error-prone.',
-            solution: 'An AI agent that handles extraction, cleaning, and outreach prep.',
-            keyFeatures: [
-                'Extracts leads from LinkedIn and Google Maps',
-                'Cleans and structures data',
-                'Feeds results into outreach workflows'
-            ]
-        }
-    },
-    {
-        id: 'ai-automation-builder',
-        slug: 'ai-automation-builder',
-        title: 'AI Automation Builder',
-        subtitle: 'Natural Language to n8n',
-        role: 'AI Systems Architect',
-        stack: ['n8n', 'AI', 'Graph Logic'],
-        category: 'Automation',
-        summary: 'AI-powered system that converts natural language into production-ready n8n workflows.',
-        content: {
-            problem: 'Automation tools like n8n are powerful but complex for non-technical users.',
-            solution: 'Generates real automation graphs from text prompts.',
-            keyFeatures: [
-                'Converts natural language into production-ready n8n workflows',
-                'Integrates directly with the n8n editor',
-                'Supports collaboration, observability, and customization'
+                'Mental health risk scoring engine'
             ]
         }
     }
