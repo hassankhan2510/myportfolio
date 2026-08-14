@@ -71,36 +71,39 @@ export const projects: Project[] = [
         id: 'syndar',
         slug: 'syndar',
         title: 'Syndar',
-        subtitle: 'Spaceborne SAR Remote-Sensing Concept',
-        role: 'Concept Architect',
-        stack: ['InSAR', 'Remote Sensing', 'AI Analysis'],
+        subtitle: 'Full-Stack Mining & Geologic Intelligence Platform',
+        role: 'Systems Architect',
+        stack: ['InSAR', 'Remote Sensing', 'Edge AI', 'Federated Learning'],
         category: 'Deep-Tech Research',
-        summary: 'A satellite-intelligence product concept utilizing Synthetic Aperture Radar (SAR) for property verification and mining monitoring.',
+        summary: 'A unified intelligence platform combining Spaceborne Synthetic Aperture Radar (SAR) with underground Edge-AI to monitor structural deformation and predict seismic hazards.',
         content: {
-            problem: 'Traditional optical satellite imagery fails in poor weather or at night, and lacks granular deformation data.',
-            solution: 'An InSAR/SAR based intelligence platform that can monitor ground deformation and verify structures regardless of cloud cover.'
+            problem: 'Mining safety and structural monitoring are currently disjointed. Traditional optical satellite imagery fails in poor weather, and underground sensors rely on centralized network uplinks that fail during collapses.',
+            solution: 'A dual-layer platform: Space-down SAR analytics for millimeter-level ground deformation monitoring, combined with edge-up Federated AI (formerly MineGuard) running on low-cost microcontrollers for localized, millisecond-latency seismic hazard prediction.',
+            keyFeatures: [
+                'InSAR/SAR monitoring regardless of cloud cover or time of day.',
+                'Offline-first underground seismic hazard prediction on embedded devices.',
+                'Sub-KB federated model updates for highly constrained network links.'
+            ]
         },
         link: 'https://syndar.vercel.app/',
         linkText: 'View Concept Site'
     },
     {
-        id: 'mineguard',
-        slug: 'mineguard',
-        title: 'MineGuard',
-        subtitle: 'Federated Edge AI for Mine Worker Safety',
-        role: 'Systems Engineer',
-        stack: ['Edge AI', 'Federated Learning', 'C++', 'Microcontrollers'],
+        id: 'sdpi-research',
+        slug: 'sdpi-research',
+        title: 'The 60-Day Window Effect',
+        subtitle: 'Macro-Economic & NLP Policy Research (Working Paper)',
+        role: 'Lead Researcher',
+        stack: ['Python', 'NLP Sentiment Analysis', 'Econometrics', 'Data Modeling'],
         category: 'Deep-Tech Research',
-        summary: 'A system that pushes predictive AI into underground mine shafts on low-cost microcontrollers, predicting seismic hazards locally in milliseconds.',
+        summary: 'A comprehensive macro-economic correlation model combining NLP sentiment analysis with sovereign bond yields.',
         content: {
-            keyFeatures: [
-                'Survives network failures that would blind traditional centralized monitoring.',
-                'Sub-KB federated model updates for highly constrained network links.',
-                'Real-time seismic hazard prediction on the edge.'
-            ]
+            problem: 'Understanding the complex interplay between sovereign default risk, climate financing (green bonds), and global policy sentiment is notoriously difficult.',
+            solution: 'Developed a computational pipeline to scrape, analyze, and correlate policy sentiment (using NLP) against real-world economic indicators like Green Bond yields.',
+            impact: 'Drafted as a policy working paper for the Sustainable Development Policy Institute (SDPI) to advise on climate-finance structuring.'
         }
     },
-    {
+{
         id: 'nexaura-hms',
         slug: 'nexaura-hms',
         title: 'Nexaura HMS',
