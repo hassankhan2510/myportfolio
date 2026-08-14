@@ -24,6 +24,24 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        id: 'morphogenetic-engine',
+        slug: 'morphogenetic-engine',
+        title: 'Morphogenetic Engine',
+        subtitle: 'Sparse Cellular Automata for Edge AI',
+        role: 'Systems Architect',
+        stack: ['C++', 'CUDA', 'Cellular Automata', 'Edge AI'],
+        category: 'Deep-Tech Research',
+        summary: 'A proprietary neural network architecture built in C++/CUDA that bypasses dense Transformer bottlenecks to fit inside 50KB-50MB memory constraints.',
+        content: {
+            problem: 'Modern neural networks require heavy GPUs, making complex physical modeling (like radar tracking or seismic prediction) impossible on cheap microcontrollers.',
+            solution: 'Engineered a Sparse Cellular Automata engine where information ripples physically across nodes, matching a 2GB Transformer accuracy on spatial tasks in 1/1,000th the memory footprint.',
+            technicalDetails: [
+                'Written natively in C++ with custom CUDA kernels for hardware acceleration.',
+                'The core engine powering Syndar’s underground and orbital perception kits.'
+            ]
+        }
+    },
+    {
         id: 'tropocompiler',
         slug: 'tropocompiler',
         title: 'TropoCompiler',
