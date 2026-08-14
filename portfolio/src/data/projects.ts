@@ -24,6 +24,25 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        id: 'tropocompiler',
+        slug: 'tropocompiler',
+        title: 'TropoCompiler',
+        subtitle: 'Multiplier-Less LLM Inference Engine',
+        role: 'Systems Architect',
+        stack: ['C++', 'AVX2 SIMD', 'Tropical Geometry', 'PyTorch'],
+        category: 'Deep-Tech Research',
+        summary: 'A custom compiler and inference engine that runs Billion-parameter Transformers using zero multiplications, relying purely on max-plus (tropical) arithmetic to eliminate GPU dependence.',
+        content: {
+            problem: 'Modern LLM inference is bottlenecked by the immense physical silicon area and wattage required for floating-point multiplication circuits on GPUs.',
+            solution: 'Engineered a zero-copy .trop binary compiler in C++ that replaces all standard attention and linear layer operations with 256-bit AVX2 hardware-accelerated max(x+y) instructions.',
+            technicalDetails: [
+                'Successfully compiled and executed a 1.5 Billion parameter (GPT-2 XL) model architecture.',
+                'Utilized memory mapping (mmap) to achieve zero-copy loading with ~0 MB RAM overhead.',
+                'Prototyped the mathematical framework to port standard weights into a 2-Watt physical FPGA/ASIC accelerator for edge deployments.'
+            ]
+        }
+    },
+    {
         id: 'albisight',
         slug: 'albisight',
         title: 'AlbiSight',
